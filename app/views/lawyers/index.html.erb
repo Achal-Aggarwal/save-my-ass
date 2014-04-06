@@ -1,0 +1,35 @@
+<h1>Listing lawyers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Exp year</th>
+      <th>Location city</th>
+      <th>Rating avg</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lawyers.each do |lawyer| %>
+      <tr>
+        <td><%= lawyer.code %></td>
+        <td><%= lawyer.name %></td>
+        <td><%= lawyer.exp_year %></td>
+        <td><%= lawyer.location_city %></td>
+        <td><%= lawyer.rating_avg %></td>
+        <td><%= link_to 'Show', lawyer %></td>
+        <td><%= link_to 'Edit', edit_lawyer_path(lawyer) %></td>
+        <td><%= link_to 'Destroy', lawyer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lawyer', new_lawyer_path %>

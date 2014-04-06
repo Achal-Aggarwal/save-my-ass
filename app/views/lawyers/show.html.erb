@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @lawyer.code %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lawyer.name %>
+</p>
+
+<p>
+  <strong>Exp year:</strong>
+  <%= @lawyer.exp_year %>
+</p>
+
+<p>
+  <strong>Location city:</strong>
+  <%= @lawyer.location_city %>
+</p>
+
+<p>
+  <strong>Rating avg:</strong>
+  <%= @lawyer.rating_avg %>
+</p>
+
+<%= link_to 'Edit', edit_lawyer_path(@lawyer) %> |
+<%= link_to 'Back', lawyers_path %>
