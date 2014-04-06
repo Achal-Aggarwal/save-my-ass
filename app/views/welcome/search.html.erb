@@ -1,4 +1,6 @@
-	
+	 <div class="alert alert-danger<%= @query == true && @lawyers.length <= 0  ? " " : " hide" %>">
+      	<strong>Oh snapp!!!</strong> no lawyer matched required query
+      </div>
 
       <div class="jumbotron">
         <h1>Get me a Lawyer</h1>
@@ -21,9 +23,7 @@
 		  <button class="btn btn-primary">Find them!!!</button>
 		<% end %>
       </div>
-      <div class="alert alert-danger<%= @query == true && @lawyers.length <= 0  ? " " : " hide" %>">
-      	<strong>Oh snapp!!!</strong> no lawyer matched required query
-      </div>
+     
 
       <div class="row marketing<%= @lawyers.length > 0 ? "" : " hide" %>">
 	      <table class="table table-hover">
