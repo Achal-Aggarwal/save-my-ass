@@ -1,4 +1,4 @@
-
+	
 
       <div class="jumbotron">
         <h1>Get me a Lawyer</h1>
@@ -8,6 +8,10 @@
 		    <label for="lawyer_location_city" style="font-size:23px;">Cities</label><br>
 		    	<%= select("lawyer", "location_city", 
 		       Lawyer.order("location_city").find(:all,  :select => 'DISTINCT lawyers.location_city').collect {|l| [ l.location_city, l.location_city ] },{:selected => @location_city},{:class => "selectpicker", :multiple => ""}) %>
+			<br>
+			<label for="toglleAll" style="font-size:13px;">Select All</label>
+			<input type="checkbox" id="toglleAll" onchange="selectAllToggle(lawyer_location_city,this)" />
+			<br>
 			<br>
 			<br>
 		  <label for="service_code" style="font-size:23px;">Service</label><br>

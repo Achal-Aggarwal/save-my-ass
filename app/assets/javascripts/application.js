@@ -16,3 +16,13 @@
 //= require_tree .
 
 //= require bootstrap
+
+function selectAllToggle(selectBox,cb) { 
+    // is the select box a multiple select box? 
+    var select = cb.checked;
+    if (selectBox.type == "select-multiple") { 
+        for (var i = 0; i < selectBox.options.length; i++) { 
+             selectBox.options[i].selected = select; 
+        } 
+    }
+}
